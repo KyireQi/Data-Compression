@@ -16,7 +16,7 @@ plt.plot(x_after, y_after, 'o')
 #求协方差矩阵
 point_matrix = np.dot(np.transpose(data), data)
 eig_val, eig_vec = np.linalg.eig(point_matrix)
-# print(eig_vec)
+print(eig_vec)
 plt.plot([eig_vec[:,0][0], 0], [eig_vec[:,0][1], 0], color = 'red')
 plt.plot([eig_vec[:,1][0], 0], [eig_vec[:,1][1], 0], color = 'blue')
 
