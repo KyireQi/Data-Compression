@@ -54,10 +54,14 @@ maxx = eig_pair[0][1]
 new_data = np.dot(data, maxx)
 ```
 最后得到的新的数据为：
+
 <img src = "Graph/4.png">
+
 可以看出已经降到了一维上。
 从图上看：
+
 <img src = "Graph/6.png" width = 70%>
+
 其实就是原始的数据点投影到蓝色向量上的结果。
 
 代码完整版：
