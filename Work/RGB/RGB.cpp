@@ -12,8 +12,8 @@ using namespace std;
 const int weight = 256;
 const int height = 256;
 
-char *cvs_name = ""; 
-char *file_name = "";
+char cvs_name[weight * height] = "C:\\Users\\sdlwq\\Desktop\\Github\\Data-Compression\\Work\\RGB\\Answer.cvs"; 
+char file_name[weight * height] = "C:\\Users\\sdlwq\\Documents\\WeChat Files\\wxid_nzxxvy7wrx5q22\\FileStorage\\File\\2022-02\\test.rgb";
 vector<uchar > R, G, B;
 uchar RGB[weight * height * 3];
 int r[weight * height], b[weight * height], g[weight * height];
@@ -59,6 +59,7 @@ int main()
         if (entG[i]) entropyG -= (entG[i] * log(entG[i]) / log(2));
         if (entB[i]) entropyB -= (entB[i] * log(entB[i]) / log(2));
     }
+    cout << "R = " << entropyR << ' ' << "G = " << entropyG << ' ' << "B = " << entropyB << endl; 
     //写入结果到.cvs
     ofstream oFile;
     oFile.open(cvs_name, ios :: out | ios :: trunc);
