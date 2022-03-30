@@ -8,7 +8,7 @@
 
 using namespace std;
 
-const string path = "1.png";
+const string path = "Panda.png";
 map<string, vector<int> > mp;
 set <string> ancillary_chunk;
 
