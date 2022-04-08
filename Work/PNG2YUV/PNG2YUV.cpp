@@ -44,10 +44,10 @@ struct Chunks
     }
 };
 
-const string path = "Dog.png";
+const string path = "Panda80.png";
 const string out_path = "out.idat";
 const string in_path = "in.idat";
-const string out_yuv = "out3.yuv";
+const string out_yuv = "out4.yuv";
 
 map<string, vector<int> > mp;
 set <string> ancillary_chunk;
@@ -138,7 +138,7 @@ void png2yuv(string out_yuv_path, uchar* buffer, uint buffer_length)
     out.write((char*)y, y_size); 
     out.write((char*)u, uv_size); out.write((char*)v, uv_size);
     out.close();
-    for( auto i : {&y, &u, &v} ) delete[] *i;
+    for(auto i : {&y, &u, &v}) delete[] *i;
     cout << "ok" << endl;
     return ;
 }
