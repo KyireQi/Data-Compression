@@ -5,11 +5,12 @@
             "label": "C/C++: g++.exe 生成活动文件",
             "command": "G:\\Mingw\\mingw64\\bin\\g++.exe",
             "args": [
-                "-fdiagnostics-color=always",
                 "-g",
-                "${file}",
+                "-fdiagnostics-color=always",
+                "${workspaceFolder}\\**.cpp",   //${workspaceFolder}表示.vscode所在的那个文件夹的路径
                 "-o",
-                "${fileDirname}\\${fileBasenameNoExtension}.exe"
+                "${workspaceFolder}\\${fileBasenameNoExtension}",
+                "-std=c++11"
             ],
             "options": {
                 "cwd": "${fileDirname}"
